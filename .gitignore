@@ -18,16 +18,12 @@ env/
 ENV/
 
 # ── TensorFlow / Model ────────────────────────────────────────
-*.h5
 *.keras
 *.pb
 saved_model/
 checkpoints/
 logs/
 
-# ── Jupyter Notebooks ─────────────────────────────────────────
-.ipynb_checkpoints/
-*.ipynb
 
 # ── Dataset / Data ────────────────────────────────────────────
 *.csv
