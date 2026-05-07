@@ -14,7 +14,7 @@ app = Flask(__name__)
 MODEL_PATH = "model.h5"
 
 if os.path.exists(MODEL_PATH):
-    print(f"Loading existing model from {MODEL_PATH}...")
+    print("Loading existing model from model.h5...")
     model = tf.keras.models.load_model(MODEL_PATH)
     print("Model loaded!")
 else:
@@ -47,22 +47,21 @@ else:
 # =========================
 # Routes
 # =========================
-@app.route('/')
+@app.route("/")
 def home():
-    return render_template('index.html')
+    return render_template("index.html")
 
 
-@app.route('/predict', methods=['POST'])
+@app.route("/predict", methods=["POST"])
 def predict():
-    data = request.json['image']
+    data = request.json["image"]
     data = data.split(",")[1]
     image_bytes = base64.b64decode(data)
 
-    image = Image.open(io.BytesIO(image_bytes)).convert('L')
+    image = Image.open(io.BytesIO(image_bytes)).convert("L")
     image = image.resize((28, 28))
 
-    img_array = np.array(image)
-    img_array = img_array / 255.0
+    img_array = np.array(image) / 255.0
     img_array = img_array.reshape(1, 28, 28, 1)
 
     prediction    = model.predict(img_array)
@@ -77,5 +76,5 @@ def predict():
     })
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=7860)
