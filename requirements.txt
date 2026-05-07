@@ -1,4 +1,6 @@
 flask
 tensorflow
 pillow
-numpy   
+numpy
+opencv-python
+gunicorn
