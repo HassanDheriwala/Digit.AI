@@ -1,0 +1,77 @@
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual Environment ───────────────────────────────────────
+tf_env/
+venv/
+env/
+.venv/
+ENV/
+
+# ── TensorFlow / Model ────────────────────────────────────────
+*.h5
+*.keras
+*.pb
+saved_model/
+checkpoints/
+logs/
+
+# ── Jupyter Notebooks ─────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Dataset / Data ────────────────────────────────────────────
+*.csv
+*.npy
+*.npz
+data/
+datasets/
+
+# ── Environment Variables ─────────────────────────────────────
+.env
+.env.local
+.env.production
+*.env
+
+# ── OS Files ──────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ── IDE / Editor ──────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# ── Flask ─────────────────────────────────────────────────────
+instance/
+.webassets-cache
+flask_session/
+
+# ── Logs ──────────────────────────────────────────────────────
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ── Testing ───────────────────────────────────────────────────
+.pytest_cache/
+.tox/
+htmlcov/
+.coverage
+coverage.xml
